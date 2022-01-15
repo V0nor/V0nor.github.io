@@ -12,13 +12,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 230px;
+  width: 17vw;
   margin: 0 auto;
 }
 
 .secundary-logo {
   display: flex;
-  width: 260px;
+  width: 22vw;
   margin: 20px auto 50px;
 }
 
@@ -162,6 +162,7 @@ span {
    }
 
 
+
 @media (max-width:1025px) {
 
     .bar1 {
@@ -175,43 +176,201 @@ span {
 
 @media (max-width:862px) {
 
+    .logo {
+      width: 25vw;
+    }
+
+    .secundary-logo {
+      width: 30vw;
+      margin-bottom: 0;
+    }
+
     .bar1 {
         width: 80vw;
     }
-    
+  
     .alinhamento-quiz  {
         width: 90vw;
         margin: auto;
     }
+
+    .title {
+      font-size:  25px;
+      margin-top: 0;
+    }
 }
 
-@media (max-width:500px) {
+@media (max-width:571px) {
+
+    .logo {
+      width: 33vw;
+    }
+    .secundary-logo {
+      width: 38vw;
+      margin-top: 5px;
+    }
+
+    .title {
+      font-size: 25px;
+    }
     .alinhamento-quiz   {
-        width: 380px;
+        width: 95vw;
+    }
+
+    .bar1 {
+      width: 85vw;
     }
 
     .fmasc {
-        width: 30vw;
+        width: 25vw;
     }
+
     .ffemi {
-        width: 30vw;
-    }
-.cta {
-
-    svg {
-        width: 40px;
-        margin-left: 3px;
+        width: 25.5vw;
     }
 
-   &:before {
-        width:4vw;
-        height:4vh;
+    .cta {
+      
+      span {
+        font-size:18px;
+      }
+
+      &:before {
+        width: 7vw;
+        height: 8vh;
+      }
     }
-    
-    span {
-        font-size: 20px;
-    }
+
+  
+
+
 
 }
+
+@media (max-width:497px) {
+
+  .logo {
+    width: 40vw;
+  }
+  .secundary-logo {
+    width: 45vw;
+  }
+
+  .title {
+    font-size: 23px;
+  }
+  
+  .alinhamento-quiz {
+    width: 88%;
+    margin:0 auto;
+
+  }
+
+  .bar1 {
+    width: 76vw;
+  }
+
+  #pergunta {
+    font-size: 24px
+  }
+
+  .cta {
+
+    span {
+      font-size: 12px;
+    } 
+
+    &:before {
+      width: 7vw;
+      height: 39px;
+    }
+    
+    svg {
+      display: none;
+    }
+  }
+
+  .cadeado {
+    width: 25px;
+  }
+}
+
+@media (max-width:393px) {
+
+  .cta {
+
+    padding: 10px 0;
+
+    span {
+      font-size: 12px;
+      padding-left:1px;
+    }
+
+    &:before {
+      width: 40px;
+      height:35px;
+    }
+
+  }
+  .cadeado {
+    width: 20px;
+  }
+  .texto-do-ssl{
+    font-size: 12px;
+  }
+}
+
+@media (min-width:2500px) {
+
+  .secundary-logo {
+    width: 20vw;
+  }
+  .alinhamento-quiz {
+    width: 80%;
+  }
+
+  .bar1 {
+    width: 55vw;
+  }
+
+  .title {
+    font-size: 50px;
+    padding-bottom: 25px;
+  }
+    #pergunta {
+    font-size: 50px;
+  }
+  .fmasc {
+    width: 17vw;
+  }
+  .ffemi {
+    width: 17.5vw;
+    margin-top: 20px;
+  }
+  
+  .cta {
+
+    span {
+      font-size: 35px;
+    }
+
+    svg {
+      width: 26px;
+      height: 26px;
+      margin-top: 4px;
+    }
+    &:before {
+      height: 60px;
+    }
+
+  }
+  .cadeado {
+    width: 55px;
+  }
+
+  .texto-do-ssl {
+    font-size: 22px;
+    margin-top: 12px;
+  }
 
 }
