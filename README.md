@@ -9,3 +9,8 @@
   E nessa outra imagem mostrando o resultado do cálculo:
   
 <img src="/Churrascometro (2).png" alt="Churrascômetro">
+
+  
+  <a href="https://github.com/V0nor/v0nor.github.io">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=v0nor&repo=v0nor.github.io&theme=midnight-purple" />
+</a>
