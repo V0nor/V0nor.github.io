@@ -2,57 +2,54 @@
 <html lang="pt-BR">
 
 <head>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800;900&display=swap');</style>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./favicon.ico">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./style.css">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Victor.dev" name="author">
+    <meta content="Calculadora de IMC para pessoas maiores de 20 anos." name="description">
+    <link href="./favicon.png" rel="icon">
+    <link href="/favicon.png" rel="apple-touch-icon">
+    <link href="./style.css" rel="stylesheet">
+    <link href="./style.css" rel="preload" as="style">
     <title>Calculadora de IMC - Adulto</title>
 </head>
 
 <body>
-    <div class="container__bg">
-        <div class="container">
-            <h2>Qual é o seu Gênero?</h2>
-            <div class="container__btn">
-                <div class="checkbox__container">
-                    <input type="radio" name="sex" id="sexm" class="checkbox homem">
-                    <span class="genero homem">Masculino</span>
+    <main>
+        <div class="container__bg">
+            <div class="container">
+                <h1>Qual é o seu Gênero?</h1>
+                <div class="container__btn">
+                    <div class="checkbox__container"><input class="checkbox homem" id="js__sexm" name="sex"
+                            type="radio"> <span class="genero homem">Masculino</span></div>
+                    <div class="checkbox__container"><input class="checkbox mulher" id="js__sexf" name="sex"
+                            type="radio"> <span class="genero mulher">Feminino</span></div>
                 </div>
-                <div class="checkbox__container">
-                    <input type="radio" name="sex" id="sexf" class="checkbox mulher">
-                    <span class="genero mulher">Feminino</span>
+                <div class="imc__corpo">
+                    <div class="imc__item altura">
+                        <p><span>*</span>Altura (ex: 1.70)</p><input class="imc__input" id="js__altura" maxlength="4"
+                            placeholder="Metros / cm" type="text">
+                    </div>
+                    <div class="imc__item peso">
+                        <p><span>*</span>Peso: (ex: 60.2)</p><input class="imc__input" id="js__peso" maxlength="5"
+                            placeholder="Quilos / kg" type="text">
+                    </div>
                 </div>
+                <div class="btn__container"><button id="js__calcular" class="btn__calcular">Calcular</button> <button
+                        id="js__apagar" class="btn__apagar">Limpar</button></div>
             </div>
-            <div class="imc__corpo">
-                <div class="imc__item altura">
-                    <p><span>*</span>Altura (ex: 1.70)</p>
-                    <input type="text" id="js-altura" class="imc__input" inputmode="numeric" maxlength="4"
-                        placeholder="Metros / cm" required>
-                </div>
-                <div class="imc__item peso">
-                    <p><span>*</span>Peso: (ex: 60.2)</p>
-                    <input type="text" id="js-peso" class="imc__input" inputmode="numeric" maxlength="5"
-                        placeholder="Quilos / kg" required>
-                </div>
-            </div>
-            <div class="btn__container">
-            <button class="btn__calcular">Calcular</button>
-            <button class="js-apagar">Limpar</button>
+            <div class="resultado">
+                <h2 id="js__grau" class="resultado__grau">GRAU</h2><span class="resultado__imc" id="js__imc"></span>
+                <span id="js__genero" class="resultado__genero">GÊNERO</span>
+                <p>Peso ideal: <span id="js__ideal"></span></p>
             </div>
         </div>
-        <div class="resultado">
-            <h2 class="grau__peso">GRAU</h2>
-            <span id="js-imc"></span>
-            <span id="js-genero">HOMEM</span>
-            <p>Peso ideal: <span id="js-peso__ideal"></span></p>
-        </div>
-    </div>
-    <table class="js-tabela" id="tabela">
-        <td class="tabela__titulo" colspan="3">TABELA DE VALORES DO IMC</td>
-        </thead>
+    </main>
+    <table class="tabela" id="js-tabela">
+        <tr>
+            <td class="tabela__titulo" colspan="3">TABELA DE VALORES DO IMC</td>
+        </tr>
         <tbody>
             <tr class="tb__titulo">
                 <td>IMC</td>
@@ -86,13 +83,13 @@
             </tr>
         </tbody>
     </table>
-    <div class="aviso active">
+    <div id="js__aviso" class="aviso active">
         <h1>Atenção!</h1>
-        <h2>Esta calculadora, calcula o IMC (índice de Massa Corporal) de pessoas <strong>acima de 20 anos.</strong> Caso tenha <strong>19 anos ou menos não a use</strong> </strong></h2>
-        <button class="btn__aviso">Entendi!</button>
-        <a href="index.html"><button class="btn__aviso menor">Sou menor!</button></a>
+        <h2>Esta calculadora, calcula o IMC (índice de Massa Corporal) de pessoas <strong>acima de 20 anos.</strong>
+            Caso tenha <strong>19 anos ou menos não a use</strong></h2><button id="js__btnAviso"
+            class="btn__aviso">Entendi!</button> <a class="btn__menor" href="index.html">Sou menor!</a>
     </div>
-    <script src="./script.js"></script>
+    <script async src="./script.js"></script>
 </body>
 
 </html>
