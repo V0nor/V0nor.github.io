@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800;900&display=swap");
+    </style>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Victor.dev" name="author" />
+    <meta content="Calculadora de IMC para pessoas maiores de 20 anos." name="description" />
+    <link href="./imgs/favicon.png" rel="icon" />
+    <link href="./imgs/favicon.png" rel="apple-touch-icon" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <link href="./css/style.css rel="preload" as="style" />
+    <title>Calculadora de IMC - Adulto</title>
+</head>
+
+<body>
+    <main>
+        <div class="container__bg">
+            <div class="container">
+                <h1>Qual é o seu Gênero?</h1>
+                <div class="container__btn">
+                    <div class="checkbox__container">
+                        <input class="checkbox homem" id="js__sexm" name="sex" type="radio" />
+                        <span class="genero homem">Masculino</span>
+                    </div>
+                    <div class="checkbox__container">
+                        <input class="checkbox mulher" id="js__sexf" name="sex" type="radio" />
+                        <span class="genero mulher">Feminino</span>
+                    </div>
+                </div>
+                <div class="imc__corpo">
+                    <div class="imc__item altura">
+                        <p><span>*</span>Altura (ex: 1.70)</p>
+                        <input class="imc__input" id="js__altura" maxlength="4" placeholder="Metros / cm" type="text" /></label>
+                    </div>
+                    <div class="imc__item peso">
+                        <p><span>*</span>Peso: (ex: 60.2)</p>
+                        <label><input class="imc__input" id="js__peso" maxlength="5" placeholder="Quilos / kg" type="text" /></label>
+                    </div>
+                </div>
+                <div class="btn__container">
+                    <button id="js__calcular" class="btn__calcular">Calcular</button>
+                    <button id="js__apagar" class="btn__apagar">Limpar</button>
+                </div>
+            </div>
+            <div class="resultado">
+                <h2 id="js__grau" class="resultado__grau">GRAU</h2>
+                <span class="resultado__imc" id="js__imc"></span>
+                <span id="js__genero" class="resultado__genero">GÊNERO</span>
+                <p>Peso ideal: <span id="js__ideal"></span></p>
+            </div>
+        </div>
+    </main>
+    <table class="tabela" id="js-tabela">
+        <tr>
+            <td class="tabela__titulo" colspan="3">TABELA DE VALORES DO IMC</td>
+        </tr>
+        <tbody>
+            <tr class="tb__titulo">
+                <td>IMC</td>
+                <td>CLASSIFICAÇÃO</td>
+                <td>OBESIDADE (GRAU)</td>
+            </tr>
+            <tr class="tb__item" id="item-1">
+                <td>MENOR QUE 18,5</td>
+                <td>DESNUTRIDO</td>
+                <td>0</td>
+            </tr>
+            <tr class="tb__item" id="item-2">
+                <td>ENTRE 18,5 E 24,9</td>
+                <td>NORMAL</td>
+                <td>0</td>
+            </tr>
+            <tr class="tb__item" id="item-3">
+                <td>ENTRE 25,0 E 29,9</td>
+                <td>SOBREPESO</td>
+                <td>I</td>
+            </tr>
+            <tr class="tb__item" id="item-4">
+                <td>ENTRE 30,0 E 39,9</td>
+                <td>OBESIDADE</td>
+                <td>II</td>
+            </tr>
+            <tr class="tb__item" id="item-5">
+                <td>MAIOR QUE 40,0</td>
+                <td>OBESIDADE GRAVE</td>
+                <td>III</td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="js__aviso" class="aviso active">
+        <h1>Atenção!</h1>
+        <h2>
+            Esta calculadora, calcula o IMC (índice de Massa Corporal) de pessoas
+            <strong>acima de 20 anos.</strong> Caso tenha
+            <strong>19 anos ou menos não a use</strong>
+        </h2>
+        <button id="js__btnAviso" class="btn__aviso">Entendi!</button>
+        <a class="btn__menor" href="index.html">Sou menor!</a>
+    </div>
+    <script async src="./js/script.js"></script>
+</body>
+
+</html>
