@@ -10,19 +10,9 @@ const resultadoValorDoImc = document.querySelector('.resultado__imc');
 const resultadoGeneroEscolhido = document.querySelector('.resultado__genero');
 const resultadoGrauDoPeso = document.querySelector('.resultado__grau');
 const resultadoPesoIdeal = document.querySelector('.resultado__ideal');
-
+const header = document.querySelector('.header');
 const avisoContainer = document.querySelector('.aviso__container');
 const avisoBtnFechar = document.querySelector('.aviso__btn');
-const header = document.querySelector('.header');
-imcAltura.addEventListener('keypress', somenteNumeros);
-imcPeso.addEventListener('keypress', somenteNumeros);
-
-function somenteNumeros(elemento) {
-  const bloquearTexto = elemento.which ? elemento.which : elemento;
-  if (bloquearTexto > 31 && bloquearTexto < 46 && bloquearTexto > 57) {
-    elemento.preventDefault();
-  }
-}
 
 function calcularIMC() {
   window.scroll(900, 0);
@@ -31,38 +21,36 @@ function calcularIMC() {
   const altura = imcAltura.value;
   const peso = imcPeso.value;
   const calculoIMC = parseFloat(peso / (altura * altura)).toFixed(2);
-  resultadoValorDoImc.innerHTML = '<span>IMC:</span>' + calculoIMC;
+  resultadoValorDoImc.innerHTML = `<span>IMC:</span>${calculoIMC}`;
   const generoEscolhido = document.querySelector(
     'input[name="sex"]:checked'
   ).value;
-  resultadoGeneroEscolhido.innerHTML =
-    '<span>GÊNERO: </span>' + generoEscolhido;
+  resultadoGeneroEscolhido.innerHTML = `<span>GÊNERO: </span>${generoEscolhido}`;
 
   if (calculoIMC < 18.5) {
-    resultadoGrauDoPeso.innerHTML = '<span>GRAU: </span>' + 'ABAIXO DO PESO';
+    resultadoGrauDoPeso.innerHTML = '<span>GRAU: </span>ABAIXO DO PESO';
   } else if (calculoIMC >= 18.5 && calculoIMC <= 24.9) {
-    resultadoGrauDoPeso.innerHTML = '<span>GRAU: </span>' + 'NORMAL';
+    resultadoGrauDoPeso.innerHTML = '<span>GRAU: </span>NORMAL';
   } else if (calculoIMC >= 25.0 && calculoIMC <= 29.9) {
-    resultadoGrauDoPeso.innerHTML = '<span>GRAU: </span>' + 'SOBREPESO';
+    resultadoGrauDoPeso.innerHTML = '<span>GRAU: </span>SOBREPESO';
   } else if (calculoIMC >= 30.0 && calculoIMC <= 34.9) {
-    resultadoGrauDoPeso.innerHTML = '<span>GRAU: </span>' + 'OBESIDADE GRAU I';
+    resultadoGrauDoPeso.innerHTML = '<span>GRAU: </span>OBESIDADE GRAU I';
   } else if (calculoIMC >= 35.0 && calculoIMC <= 39.9) {
-    resultadoGrauDoPeso.innerHTML = '<span>GRAU: </span>' + 'OBESIDADE GRAU II';
+    resultadoGrauDoPeso.innerHTML = '<span>GRAU: </span>OBESIDADE GRAU II';
   } else if (calculoIMC > 40.0) {
-    resultadoGrauDoPeso.innerHTML =
-      '<span>GRAU: </span>' + 'OBESIDADE GRAU III';
+    resultadoGrauDoPeso.innerHTML = '<span>GRAU: </span>OBESIDADE GRAU III';
   }
+  const alturaTotal = parseFloat(altura * altura).toFixed(2);
 
-  if (!0 == generoFeminino.checked) {
-    let alturaTotal = parseFloat(altura * altura).toFixed(2);
-    let calculoPesoIdeal = parseFloat(21 * alturaTotal).toFixed(2);
-    resultadoPesoIdeal.innerHTML =
-      '<span>PESO IDEAL: </span>' + calculoPesoIdeal + ' KG';
+  calculoPesoIdeal = parseFloat(21 * alturaTotal).toFixed(2);
+  if (generoFeminino.checked) {
+    alturaTotal;
+    calculoPesoIdeal;
+    resultadoPesoIdeal.innerHTML = `<span>PESO IDEAL: </span>${calculoPesoIdeal} KG`;
   } else {
-    alturaTotal = parseFloat(altura * altura).toFixed(2);
+    alturaTotal;
     calculoPesoIdeal = parseFloat(22.5 * alturaTotal).toFixed(2);
-    resultadoPesoIdeal.innerHTML =
-      '<span>PESO IDEAL: </span>' + calculoPesoIdeal + ' KG';
+    resultadoPesoIdeal.innerHTML = `<span>PESO IDEAL: </span>${calculoPesoIdeal} KG`;
   }
 }
 
@@ -76,12 +64,10 @@ imcBtnLimpar.addEventListener('click', () => {
 });
 
 header.classList.add('ativo');
-
 resultadoBtnFechar.addEventListener('click', () => {
   resultadoContainer.classList.toggle('ativo');
   header.classList.remove('ativo');
 });
-
 avisoBtnFechar.addEventListener('click', () => {
   header.classList.remove('ativo');
   avisoContainer.classList.remove('ativo');
