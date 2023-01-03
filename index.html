@@ -1,98 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800;900&display=swap');
-    </style>
     <meta charset="UTF-8" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="v0nor" name="author" />
-    <meta
-      content="Calculadora de IMC para pessoas maiores de 20 anos."
-      name="description"
-    />
-    <link href="./imgs/favicon.png" rel="icon" />
-    <link href="./imgs/favicon.png" rel="apple-touch-icon" />
     <link href="./style/style.css" rel="stylesheet" />
     <link href="./style/style.css" rel="preload" as="style" />
-    <title>Calculadora de IMC - Adulto</title>
+    <title>PORTFÓLIO DEV.</title>
   </head>
 
   <body>
-    <header class="header">
-      <section class="genero">
-        <h2 class="genero__titulo">Qual é o seu Gênero?</h2>
-        <div class="genero__container">
-          <div class="genero__item">
-            <input
-              type="radio"
-              class="genero__radio radio__masculino"
-              name="sex"
-              value="MASCULINO"
-            />
-            <span class="genero__text genero__masculino">Masculino</span>
-          </div>
-          <div class="genero__item">
-            <input
-              type="radio"
-              class="genero__radio radio__feminino"
-              name="sex"
-              value="FEMININO"
-            />
-            <span class="genero__text genero__feminino">Feminino</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="imc">
-        <h2 class="imc__titulo">Quais são suas medidas?</h2>
-        <div class="imc__container">
-          <div class="imc__item">
-            <p class="imc__texto"><span>*</span>Altura (ex: 1.70)</p>
-            <input
-              class="imc__input imc__altura"
-              maxlength="4"
-              placeholder="Metros / cm"
-              type="text"
-            />
-          </div>
-          <div class="imc__item">
-            <p class="imc__texto"><span>*</span>Peso: (ex: 60.2)</p>
-            <input
-              class="imc__input imc__peso"
-              id="js__peso"
-              maxlength="5"
-              placeholder="Quilos / kg"
-              type="text"
-            />
-          </div>
-        </div>
-        <button class="imc__btn btn--calcular">Calcular</button>
-        <button class="imc__btn btn--limpar">Limpar</button>
-      </section>
+    <header>
+      <h1>PORTFÓLIO EM DESENVOLVIMENTO!</h1>
     </header>
-
-    <div class="resultado">
-      <button class="resultado__btn btn--fechar">FECHAR</button>
-      <p class="resultado__imc"><span></span></p>
-      <div class="resultado__container">
-        <p class="resultado__genero"><span>GÊNERO: </span>NÃO DEFINIDO</p>
-        <p class="resultado__grau"><span>GRAU: </span>NÃO DEFINIDO</p>
-        <p class="resultado__ideal"><span>PESO IDEAL: </span>NÃO DEFINIDO</p>
-      </div>
-    </div>
-
-    <div class="aviso__container ativo">
-      <h1 class="aviso__titulo">Atenção!</h1>
-      <h2 class="aviso__texto">
-        Esta calculadora, calcula o IMC (índice de Massa Corporal) de pessoas
-        <strong>acima de 20 anos.</strong> Caso tenha
-        <strong>19 anos ou menos não a use</strong>
-      </h2>
-      <button class="aviso__btn btn--fechar">Entendi!</button>
-      <a class="aviso__btn" href="index.html">Sou menor!</a>
-    </div>
-    <script async src="./script/app.js"></script>
   </body>
 </html>
