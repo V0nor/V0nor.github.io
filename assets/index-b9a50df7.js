@@ -374,7 +374,7 @@ flex-flow: row wrap;
 max-width: 1000px;
 `, Ko = V.div`
 background-color: #f53e53;
-background-image: url('/imgs/death.svg');
+background-image: url('imgs/death.svg');
 background-size:cover;
 background-position:-100%;
 margin: 1em;
