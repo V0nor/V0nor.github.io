@@ -285,4 +285,4 @@ Error generating stack: `+i.message+`
 `,n1=I(Bf)`
   display: block;
   margin: auto;
-`;function r1(){const[e,t]=M.useState(!1);return M.useEffect(()=>{setTimeout(()=>{t(!0)},0)},[]),O.jsxs(O.Fragment,{children:[O.jsx(ev,{}),O.jsx(Jv,{}),O.jsx(Sv,{}),e&&O.jsxs(O.Fragment,{children:[O.jsx(qv,{}),O.jsx(qg,{}),O.jsx(_v,{}),O.jsx(Rv,{})]})]})}Ca.createRoot(document.getElementById("root")).render(O.jsx(j.StrictMode,{children:O.jsx(r1,{})}));
+`;function r1(){const[e,t]=M.useState(!1);return M.useEffect(()=>{setTimeout(()=>{t(!0)},18e4)},[]),O.jsxs(O.Fragment,{children:[O.jsx(ev,{}),O.jsx(Jv,{}),O.jsx(Sv,{}),e&&O.jsxs(O.Fragment,{children:[O.jsx(qv,{}),O.jsx(qg,{}),O.jsx(_v,{}),O.jsx(Rv,{})]})]})}Ca.createRoot(document.getElementById("root")).render(O.jsx(j.StrictMode,{children:O.jsx(r1,{})}));
